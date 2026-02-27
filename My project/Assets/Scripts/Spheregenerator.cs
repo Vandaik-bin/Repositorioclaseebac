@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +9,28 @@ public class Spheregenerator : MonoBehaviour
     public float Escalamiento;
     public int numSpheras=0;
 
+    void Awake()
+    {
+        GameObject obj = Instantiate(PrefabSphere);
+
+        MeshRenderer renderer = obj.GetComponent<MeshRenderer>();
+        renderer.material = new Material(renderer.material);
+        renderer.material.color = Random.ColorHSV();
+    }
+    
+    void OnEnable()
+    {
+        Instantiate(PrefabSphere);
+    }
+
+   
+    void OnDisable()
+    {
+        if (Application.isPlaying)
+        {
+            Instantiate(PrefabSphere);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +48,7 @@ public class Spheregenerator : MonoBehaviour
         MeshRenderer renderer = tempGameObject.GetComponent<MeshRenderer>();
         renderer.material = new Material(renderer.material);
         renderer.material.color = c;
-        tempGameObject.transform.position x = Random.insideUnitSphere;
+        tempGameObject.transform.position = Random.insideUnitSphere;
 
         
         listaDeesferas.Add(tempGameObject);
@@ -47,6 +69,16 @@ public class Spheregenerator : MonoBehaviour
         {
             listaDeesferas.Remove(go);
             Destroy(go);
+        }
+    }
+
+    
+    void FixedUpdate()
+    {
+        foreach (GameObject go in listaDeesferas)
+        {
+            MeshRenderer renderer = go.GetComponent<MeshRenderer>();
+            renderer.material.color = Random.ColorHSV();
         }
     }
 }
