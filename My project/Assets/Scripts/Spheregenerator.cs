@@ -26,7 +26,7 @@ public class Spheregenerator : MonoBehaviour
         MeshRenderer renderer = tempGameObject.GetComponent<MeshRenderer>();
         renderer.material = new Material(renderer.material);
         renderer.material.color = c;
-        tempGameObject.transform.position x = Random.insideUnitSphere;
+        tempGameObject.transform.position = Random.insideUnitSphere;
 
         
         listaDeesferas.Add(tempGameObject);
