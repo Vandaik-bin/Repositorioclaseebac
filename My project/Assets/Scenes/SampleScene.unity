@@ -881,6 +881,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f0bcccddb9b844883a2125014d4fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  variable1: 0
+  variable2: 0
+  variable3: 0
+  cubo1: {fileID: 0}
+  cubo2: {fileID: 0}
+  cubo3: {fileID: 0}
+  cubo4: {fileID: 0}
+  cubo5: {fileID: 0}
+  tiempo: 0
 --- !u!1 &1238769677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1021,7 @@ GameObject:
   - component: {fileID: 1358361703}
   - component: {fileID: 1358361702}
   - component: {fileID: 1358361701}
+  - component: {fileID: 1358361705}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1105,6 +1115,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1358361705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358361700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fcab122057da34398b08056537ea8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorTexto: negro
 --- !u!1 &1715983883 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 31899291626206912, guid: 3cb53e17cca662d4facdfafb4bbf166a, type: 3}

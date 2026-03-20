@@ -6,14 +6,14 @@ public class NewBehaviourScript : MonoBehaviour
 {
 
     int contador = 0;
-    float valor = 0;
+    float valor = 1f;
 
     float a = 6.3f;
     float b = 3.7f;
 
     public string ColorTexto = "negro";
 
-    string Contra = "arbolperropianotonto";
+    string Contra = "arbol perro piano tonto";
 
 
     // Start is called before the first frame update
@@ -29,15 +29,35 @@ public class NewBehaviourScript : MonoBehaviour
         Debug.Log("Float con 4 decimales" + texto);
 
         string palabra1 = Contra.Substring(0,5);
-        string palabra2 = Contra.Substring(6,10);
-        string palabra3 = Contra.Substring(7,11);
-        string palabra4 = Contra.Substring(8,12);
+        string palabra2 = Contra.Substring(6,5);
+        string palabra3 = Contra.Substring(12,5);
+        string palabra4 = Contra.Substring(18);
 
         string[] piezas = Contra.Split(' ');
         foreach (string pieza in piezas)
         {
             Debug.Log(pieza);
         }
+
+        string num1 = "10";
+        string num2 = "5";
+
+        int n1 = int.Parse(num1);
+        int n2 = int.Parse(num2);
+
+        int suma = n1 + n2;
+        Debug.Log("Suma parseada: " + suma);
+
+        for (int i = 0; i < Contra.Length; i++)
+        {
+            if (i % 2 == 0)
+            {
+                Debug.Log("Indice par: " + Contra[i]);
+            }
+        }
+
+        string recortado = Contra.Substring(0, Contra.Length - 5);
+        Debug.Log("String recortado: " + recortado);
 
     }
 
